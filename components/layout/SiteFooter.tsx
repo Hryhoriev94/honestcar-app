@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { SiteFooterProps } from '@/interfaces/ComponentProps'
 import { FooterAccordion, FooterContactAccordion } from '@/components/layout/FooterAccordion'
-import { Button } from '@/components/ui/Button'
+import { BookingButton } from '@/components/ui/BookingButton'
 import { SocialLinks } from '@/components/ui/SocialLinks'
 
 const socialLinks = [
@@ -22,9 +22,9 @@ export function SiteFooter({ contact, navigation }: SiteFooterProps) {
             </Link>
             <p>Profesjonalny serwis samochodowy w Warszawie. Uczciwe podejście, jakość, której możesz zaufać.</p>
             <SocialLinks className="footer__socials" iconClassName="icon-round" links={socialLinks} />
-            <Button onClickClassName="js-open-booking" variant="primary">
+            <BookingButton variant="primary">
               Umów wizytę
-            </Button>
+            </BookingButton>
           </div>
 
           <nav className="footer__nav" aria-label="Footer navigation">
@@ -38,10 +38,10 @@ export function SiteFooter({ contact, navigation }: SiteFooterProps) {
         </div>
 
         <div className="footer__bottom">
-          <p>© 2026 Honest Car. All rights reserved.</p>
+          <p>© 2026 Honest Car. Wszelkie prawa zastrzeżone.</p>
           <div>
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/terms">Terms & Conditions</a>
+            <a href="/privacy-policy">Polityka prywatności</a>
+            <a href="/terms">Regulamin</a>
           </div>
         </div>
       </div>

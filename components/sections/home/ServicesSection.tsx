@@ -1,35 +1,16 @@
-import type { CSSProperties } from 'react'
-import type { ServiceCardProps, ServicesSectionProps } from '@/interfaces/ComponentProps'
 import { BenefitCard } from '@/components/cards/BenefitCard'
-import { Button, ButtonLink } from '@/components/ui/Button'
-import { IconRound } from '@/components/ui/IconRound'
-
-function ServiceCard({ service }: ServiceCardProps) {
-  return (
-    <a
-      href={service.href}
-      className="card card--service"
-      style={{ '--bg-image': `url("${service.image}")` } as CSSProperties}
-    >
-      <div className="card--service__content">
-        <h3>{service.title}</h3>
-        <IconRound>
-          <i className="fa-solid fa-arrow-right" />
-        </IconRound>
-      </div>
-    </a>
-  )
-}
+import { ServiceCard } from '@/components/cards/ServiceCard'
+import type { ServicesSectionProps } from '@/interfaces/ComponentProps'
+import { BookingButton } from '@/components/ui/BookingButton'
+import { ButtonLink } from '@/components/ui/Button'
+import { SectionIntro } from '@/components/ui/SectionIntro'
 
 export function ServicesSection({ benefits, services }: ServicesSectionProps) {
   return (
     <section id="our-services" className="services js-white-bg">
       <div className="container">
         <div className="head-section">
-          <div>
-            <span className="eyebrow">Nasze usługi</span>
-            <h2 className="title-h2">Precyzyjna pielęgnacja Twojego samochodu</h2>
-          </div>
+          <SectionIntro eyebrow="Nasze usługi" title="Precyzyjna pielęgnacja Twojego samochodu" />
           <div>
             <p>
               Od diagnostyki po skomplikowane naprawy - zapewniamy jakość na poziomie dealerskim z indywidualnym
@@ -52,9 +33,9 @@ export function ServicesSection({ benefits, services }: ServicesSectionProps) {
             <BenefitCard benefit={benefit} key={benefit.title} />
           ))}
 
-          <Button onClickClassName="js-open-booking" variant="primary">
+          <BookingButton variant="primary">
             Umów wizytę
-          </Button>
+          </BookingButton>
         </div>
       </div>
     </section>

@@ -1,15 +1,19 @@
 import type { ReviewsSectionProps } from '@/interfaces/ComponentProps'
 import { ButtonLink } from '@/components/ui/Button'
 import { ReviewCard } from '@/components/cards/ReviewCard'
+import { SectionIntro } from '@/components/ui/SectionIntro'
 
 export function ReviewsSection({ reviews }: ReviewsSectionProps) {
   return (
     <section className="reviews js-white-bg" id="reviews">
       <div className="container split-layout split-layout--media-right">
         <div className="reviews__content split-layout__content">
-          <span className="eyebrow">Opinie</span>
-          <h2 className="title-h2">Co mówią nasi klienci</h2>
-          <p className="reviews__text">Prawdziwe opinie kierowców, którzy powierzają nam swoje samochody.</p>
+          <SectionIntro
+            eyebrow="Opinie"
+            text="Prawdziwe opinie kierowców, którzy powierzają nam swoje samochody."
+            textClassName="reviews__text"
+            title="Co mówią nasi klienci"
+          />
           <div className="reviews__rating">
             <span>4.9</span>
             <p>★★★★★</p>

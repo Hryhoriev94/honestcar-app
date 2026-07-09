@@ -1,19 +1,21 @@
-import { Button } from '@/components/ui/Button'
+import { BookingButton } from '@/components/ui/BookingButton'
+import { SectionIntro } from '@/components/ui/SectionIntro'
 
 export function CtaBannerSection() {
   return (
     <section className="cta-banner js-white-bg">
       <div className="cta-banner__inner">
-        <div className="cta-banner__content">
-          <span className="eyebrow">Zarezerwuj usługę</span>
-          <h2 className="title-h2">Twój samochód zasługuje na najlepszą opiekę.</h2>
-          <p className="cta-banner__text">
-            Umów wizytę w naszym serwisie i ciesz się spokojem, wiedząc, że jesteś w dobrych rękach.
-          </p>
-          <Button onClickClassName="js-open-booking" variant="primary">
+        <SectionIntro
+          className="cta-banner__content"
+          eyebrow="Zarezerwuj usługę"
+          text="Umów wizytę w naszym serwisie i ciesz się spokojem, wiedząc, że jesteś w dobrych rękach."
+          textClassName="cta-banner__text"
+          title="Twój samochód zasługuje na najlepszą opiekę."
+        >
+          <BookingButton variant="primary">
             Zarezerwuj wizytę
-          </Button>
-        </div>
+          </BookingButton>
+        </SectionIntro>
       </div>
       <div className="cta-banner__image" />
     </section>

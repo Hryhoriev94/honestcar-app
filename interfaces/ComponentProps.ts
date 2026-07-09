@@ -58,6 +58,24 @@ export interface ServiceCardProps {
   service: ServicePreview
 }
 
+export interface SectionIntroProps {
+  action?: React.ReactNode
+  children?: React.ReactNode
+  className?: string
+  eyebrow: string
+  text?: string
+  textClassName?: string
+  title: string
+  titleAs?: 'h2' | 'h3'
+  titleClassName?: string
+}
+
+export interface BookingButtonProps {
+  children: React.ReactNode
+  className?: string
+  variant: ButtonVariant
+}
+
 export interface LanguageSwitcherProps {
   activeLanguage: string
   languages: string[]

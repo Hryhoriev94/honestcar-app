@@ -1,5 +1,6 @@
 import type { HomeHeroSectionProps } from '@/interfaces/ComponentProps'
-import { Button, ButtonLink } from '@/components/ui/Button'
+import { BookingButton } from '@/components/ui/BookingButton'
+import { ButtonLink } from '@/components/ui/Button'
 
 export function HomeHeroSection({ highlights }: HomeHeroSectionProps) {
   return (
@@ -29,9 +30,9 @@ export function HomeHeroSection({ highlights }: HomeHeroSectionProps) {
             ))}
           </div>
           <div className="hero__actions">
-            <Button onClickClassName="js-open-booking" variant="primary">
+            <BookingButton variant="primary">
               Umów wizytę
-            </Button>
+            </BookingButton>
             <ButtonLink href="#our-services" variant="outline">
               Poznaj usługi
             </ButtonLink>

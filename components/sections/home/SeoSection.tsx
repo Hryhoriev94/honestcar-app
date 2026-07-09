@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/Button'
+import { SectionIntro } from '@/components/ui/SectionIntro'
 
 export function SeoSection() {
   return (
@@ -6,8 +7,10 @@ export function SeoSection() {
       <div className="seo-block__inner">
         <div className="seo-block__card">
           <div className="seo-block__content">
-            <span className="eyebrow">O naszym serwisie</span>
-            <h2 className="title-h2">Profesjonalny serwis samochodowy i uczciwe podejście.</h2>
+            <SectionIntro
+              eyebrow="O naszym serwisie"
+              title="Profesjonalny serwis samochodowy i uczciwe podejście."
+            />
             <div className="seo-block__text is-collapsed" id="seoText">
               <p>
                 Honest Car oferuje najwyższej jakości diagnostykę samochodową, naprawy i konserwację nowoczesnych

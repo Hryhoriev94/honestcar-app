@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { SiteHeaderProps } from '@/interfaces/ComponentProps'
-import { Button, ButtonLink } from '@/components/ui/Button'
+import { BookingButton } from '@/components/ui/BookingButton'
+import { ButtonLink } from '@/components/ui/Button'
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'
 import { SocialLinks } from '@/components/ui/SocialLinks'
 
@@ -30,9 +31,9 @@ export function SiteHeader({ contact, navigation }: SiteHeaderProps) {
           <div className="topbar__actions">
             <SocialLinks className="topbar__socials" links={socialLinks} />
             <LanguageSwitcher activeLanguage="PL" languages={languages} />
-            <Button className="topbar__booking" onClickClassName="js-open-booking" variant="outline">
+            <BookingButton className="topbar__booking" variant="outline">
               Umów wizytę
-            </Button>
+            </BookingButton>
           </div>
         </div>
       </div>

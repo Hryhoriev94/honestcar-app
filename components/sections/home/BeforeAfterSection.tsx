@@ -1,6 +1,7 @@
 import type { BeforeAfterSectionProps } from '@/interfaces/ComponentProps'
 import { MiniComparison } from '@/components/cards/MiniComparison'
 import { ButtonLink } from '@/components/ui/Button'
+import { SectionIntro } from '@/components/ui/SectionIntro'
 
 export function BeforeAfterSection({ projects }: BeforeAfterSectionProps) {
   return (
@@ -8,11 +9,12 @@ export function BeforeAfterSection({ projects }: BeforeAfterSectionProps) {
       <div className="container">
         <div className="split-layout split-layout--media-right">
           <div className="split-layout__content">
-            <span className="eyebrow">Przed / Po</span>
-            <h2 className="title-h2">Prawdziwe transformacje. Profesjonalne rezultaty.</h2>
-            <p className="before-after__text">
-              Od zużytych detali po fabryczne wykończenie - każdy samochód otrzymuje uwagę, na jaką zasługuje.
-            </p>
+            <SectionIntro
+              eyebrow="Przed / Po"
+              text="Od zużytych detali po fabryczne wykończenie - każdy samochód otrzymuje uwagę, na jaką zasługuje."
+              textClassName="before-after__text"
+              title="Prawdziwe transformacje. Profesjonalne rezultaty."
+            />
             <ButtonLink href="/portfolio" variant="outline">
               Portfolio
             </ButtonLink>
@@ -39,11 +41,14 @@ export function BeforeAfterSection({ projects }: BeforeAfterSectionProps) {
         </div>
 
         <div className="before-after__projects card">
-          <div className="before-after__projects-head">
-            <span className="eyebrow">Więcej transformacji</span>
-            <h3>Każdy samochód ma swoją historię.</h3>
-            <p>Here are a few we’re proud of.</p>
-          </div>
+          <SectionIntro
+            className="before-after__projects-head"
+            eyebrow="Więcej transformacji"
+            text="Oto kilka realizacji, z których jesteśmy dumni."
+            title="Każdy samochód ma swoją historię."
+            titleAs="h3"
+            titleClassName=""
+          />
           {projects.map((project) => (
             <MiniComparison key={project.title} project={project} />
           ))}

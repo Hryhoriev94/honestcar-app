@@ -2,6 +2,7 @@ import type { ContactSectionProps } from '@/interfaces/ComponentProps'
 import { Button } from '@/components/ui/Button'
 import { ContactItem } from '@/components/cards/ContactItem'
 import { FormField, TextareaField } from '@/components/ui/FormFields'
+import { SectionIntro } from '@/components/ui/SectionIntro'
 
 export function ContactSection({ contact }: ContactSectionProps) {
   return (
@@ -9,8 +10,11 @@ export function ContactSection({ contact }: ContactSectionProps) {
       <div className="container">
         <div className="contact__wrapper">
           <div className="contact__content card">
-            <span className="eyebrow">Kontakt</span>
-            <h2>Umów wizytę lub skontaktuj się z nami</h2>
+            <SectionIntro
+              eyebrow="Kontakt"
+              title="Umów wizytę lub skontaktuj się z nami"
+              titleClassName=""
+            />
             <div className="contact__list">
               <ContactItem href={contact.phoneHref} label="Telefon" value={`+48 ${contact.phone}`} />
               <ContactItem href={contact.emailHref} label="E-mail" value={contact.email} />
@@ -25,8 +29,12 @@ export function ContactSection({ contact }: ContactSectionProps) {
             </div>
           </div>
           <div className="contact__form white-form">
-            <span className="eyebrow">Formularz kontaktowy</span>
-            <h3>Napisz do nas</h3>
+            <SectionIntro
+              eyebrow="Formularz kontaktowy"
+              title="Napisz do nas"
+              titleAs="h3"
+              titleClassName=""
+            />
             <form>
               <FormField placeholder="Imię i nazwisko" required />
               <FormField placeholder="Telefon" required type="tel" />

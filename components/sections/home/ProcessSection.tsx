@@ -1,21 +1,19 @@
 import type { ProcessSectionProps } from '@/interfaces/ComponentProps'
 import { ProcessStepCard } from '@/components/cards/ProcessStepCard'
-import { Button } from '@/components/ui/Button'
+import { BookingButton } from '@/components/ui/BookingButton'
+import { SectionIntro } from '@/components/ui/SectionIntro'
 
 export function ProcessSection({ steps }: ProcessSectionProps) {
   return (
     <section className="process" id="process" data-step="form">
       <div className="process__inner">
         <div className="head-section">
-          <div>
-            <span className="eyebrow">Jak pracujemy</span>
-            <h2 className="title-h2">Jak korzystać z naszych usług?</h2>
-          </div>
+          <SectionIntro eyebrow="Jak pracujemy" title="Jak korzystać z naszych usług?" />
           <div>
             <p>Prosty proces, pełna opieka i najwyższa jakość na każdym etapie.</p>
-            <Button className="d-xl-block" onClickClassName="js-open-booking" variant="outline">
+            <BookingButton className="d-xl-block" variant="outline">
               Umów wizytę
-            </Button>
+            </BookingButton>
           </div>
         </div>
 
