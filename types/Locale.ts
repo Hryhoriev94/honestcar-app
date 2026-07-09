@@ -1,1 +1,1 @@
-export type Locale = 'en' | 'pl' | 'ru' | 'uk'
+export type Locale = 'pl' | 'ru' | 'uk'

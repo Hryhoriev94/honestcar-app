@@ -13,21 +13,25 @@ import { ProcessSection } from '@/components/sections/home/ProcessSection'
 import { ReviewsSection } from '@/components/sections/home/ReviewsSection'
 import { SeoSection } from '@/components/sections/home/SeoSection'
 import { ServicesSection } from '@/components/sections/home/ServicesSection'
-import {
-  beforeAfterProjects,
-  blogPreviewPosts,
-  brands,
-  faqItems,
-  heroHighlights,
-  processSteps,
-  reviews,
-  serviceBenefits,
-  services,
-  siteContact,
-  siteNavigation,
-} from '@/data/homePage'
+import { getHomePageData } from '@/data/getHomePageData'
 
-export default function HomePage() {
+export const dynamic = 'force-dynamic'
+
+export default async function HomePage() {
+  const {
+    beforeAfterProjects,
+    blogPreviewPosts,
+    brands,
+    faqItems,
+    heroHighlights,
+    processSteps,
+    reviews,
+    serviceBenefits,
+    services,
+    siteContact,
+    siteNavigation,
+  } = await getHomePageData()
+
   return (
     <>
       <SiteHeader contact={siteContact} navigation={siteNavigation} />

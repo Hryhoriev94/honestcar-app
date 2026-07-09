@@ -71,3 +71,17 @@ export interface SiteNavigation {
   primary: NavigationItem[]
   services: NavigationItem[]
 }
+
+export interface HomePageData {
+  beforeAfterProjects: BeforeAfterProject[]
+  blogPreviewPosts: BlogPreviewItem[]
+  brands: BrandLogo[]
+  faqItems: FaqItem[]
+  heroHighlights: HeroHighlight[]
+  processSteps: ProcessStep[]
+  reviews: ReviewItem[]
+  serviceBenefits: BenefitItem[]
+  services: ServicePreview[]
+  siteContact: SiteContact
+  siteNavigation: SiteNavigation
+}

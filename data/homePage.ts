@@ -8,6 +8,7 @@ import type {
   ProcessStep,
   ReviewItem,
   ServicePreview,
+  HomePageData,
   SiteContact,
   SiteNavigation,
 } from '@/interfaces/HomePageContent'
@@ -204,3 +205,17 @@ export const blogPreviewPosts: BlogPreviewItem[] = [
     category: 'Serwice',
   },
 ]
+
+export const fallbackHomePageData: HomePageData = {
+  beforeAfterProjects,
+  blogPreviewPosts,
+  brands,
+  faqItems,
+  heroHighlights,
+  processSteps,
+  reviews,
+  serviceBenefits,
+  services,
+  siteContact,
+  siteNavigation,
+}

@@ -2,6 +2,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { pl } from '@payloadcms/translations/languages/pl'
+import { ru } from '@payloadcms/translations/languages/ru'
+import { uk } from '@payloadcms/translations/languages/uk'
 import { buildConfig } from 'payload'
 import { Media } from '@/payload/collections/Media'
 import { Menus } from '@/payload/collections/Menus'
@@ -10,6 +13,7 @@ import { PortfolioItems } from '@/payload/collections/PortfolioItems'
 import { Services } from '@/payload/collections/Services'
 import { SpecialOffers } from '@/payload/collections/SpecialOffers'
 import { Users } from '@/payload/collections/Users'
+import { HomePage } from '@/payload/globals/HomePage'
 import { SiteSettings } from '@/payload/globals/SiteSettings'
 
 const filename = fileURLToPath(import.meta.url)
@@ -29,10 +33,18 @@ export default buildConfig({
     },
   }),
   editor: lexicalEditor(),
-  globals: [SiteSettings],
+  globals: [SiteSettings, HomePage],
+  i18n: {
+    fallbackLanguage: 'pl',
+    supportedLanguages: {
+      pl,
+      ru,
+      uk,
+    },
+  },
   localization: {
-    locales: ['en', 'pl', 'ru', 'uk'],
-    defaultLocale: 'en',
+    locales: ['pl', 'ru', 'uk'],
+    defaultLocale: 'pl',
     fallback: true,
   },
   secret: process.env.PAYLOAD_SECRET ?? '',
