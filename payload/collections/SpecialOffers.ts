@@ -33,5 +33,27 @@ export const SpecialOffers: CollectionConfig = {
       type: 'upload',
       relationTo: 'media',
     },
+    {
+      name: 'details',
+      type: 'group',
+      localized: true,
+      fields: [
+        { name: 'eyebrow', type: 'text' },
+        { name: 'badgeLabel', type: 'text' },
+        { name: 'badgeValue', type: 'text' },
+        { name: 'itemsTitle', type: 'text' },
+        { name: 'itemsText', type: 'textarea' },
+      ],
+    },
+    {
+      name: 'prices',
+      type: 'array',
+      localized: true,
+      fields: [
+        { name: 'name', type: 'text', required: true },
+        { name: 'regular', type: 'text' },
+        { name: 'promo', type: 'text', required: true },
+      ],
+    },
   ],
 }

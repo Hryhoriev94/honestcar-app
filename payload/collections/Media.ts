@@ -10,6 +10,12 @@ export const Media: CollectionConfig = {
   },
   fields: [
     {
+      name: 'wordpressId',
+      type: 'number',
+      index: true,
+      unique: true,
+    },
+    {
       name: 'alt',
       type: 'text',
       localized: true,

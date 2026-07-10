@@ -36,5 +36,33 @@ export const PortfolioItems: CollectionConfig = {
         },
       ],
     },
+    {
+      name: 'facts',
+      type: 'array',
+      localized: true,
+      fields: [
+        { name: 'label', type: 'text', required: true },
+        { name: 'value', type: 'text', required: true },
+      ],
+    },
+    {
+      name: 'story',
+      type: 'array',
+      localized: true,
+      fields: [
+        { name: 'title', type: 'text', required: true },
+        { name: 'text', type: 'textarea', required: true },
+      ],
+    },
+    {
+      name: 'sidebar',
+      type: 'array',
+      localized: true,
+      fields: [
+        { name: 'title', type: 'text', required: true },
+        { name: 'text', type: 'textarea' },
+        { name: 'itemsText', type: 'textarea' },
+      ],
+    },
   ],
 }

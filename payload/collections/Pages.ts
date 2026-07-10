@@ -1,5 +1,8 @@
 import type { CollectionConfig } from 'payload'
 import { HeroBlock } from '@/payload/blocks/HeroBlock'
+import { AboutBlock } from '@/payload/blocks/AboutBlock'
+import { ContactBlock } from '@/payload/blocks/ContactBlock'
+import { PriceTableBlock } from '@/payload/blocks/PriceTableBlock'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -24,7 +27,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [HeroBlock],
+      blocks: [HeroBlock, AboutBlock, ContactBlock, PriceTableBlock],
       required: true,
     },
     {

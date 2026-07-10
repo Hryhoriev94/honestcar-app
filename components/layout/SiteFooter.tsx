@@ -40,8 +40,8 @@ export function SiteFooter({ contact, navigation }: SiteFooterProps) {
         <div className="footer__bottom">
           <p>© 2026 Honest Car. Wszelkie prawa zastrzeżone.</p>
           <div>
-            <a href="/privacy-policy">Polityka prywatności</a>
-            <a href="/terms">Regulamin</a>
+            <Link href="/privacy-policy">Polityka prywatności</Link>
+            <Link href="/terms">Regulamin</Link>
           </div>
         </div>
       </div>

@@ -24,7 +24,14 @@ export const Menus: CollectionConfig = {
         {
           name: 'href',
           type: 'text',
-          required: true,
+          admin: {
+            description: 'Fallback URL. Prefer selecting a route for internal links.',
+          },
+        },
+        {
+          name: 'route',
+          type: 'relationship',
+          relationTo: 'routes',
         },
         {
           name: 'children',
@@ -39,7 +46,14 @@ export const Menus: CollectionConfig = {
             {
               name: 'href',
               type: 'text',
-              required: true,
+              admin: {
+                description: 'Fallback URL. Prefer selecting a route for internal links.',
+              },
+            },
+            {
+              name: 'route',
+              type: 'relationship',
+              relationTo: 'routes',
             },
           ],
         },

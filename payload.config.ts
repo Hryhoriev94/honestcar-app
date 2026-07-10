@@ -10,6 +10,7 @@ import { Media } from '@/payload/collections/Media'
 import { Menus } from '@/payload/collections/Menus'
 import { Pages } from '@/payload/collections/Pages'
 import { PortfolioItems } from '@/payload/collections/PortfolioItems'
+import { Routes } from '@/payload/collections/Routes'
 import { Services } from '@/payload/collections/Services'
 import { SpecialOffers } from '@/payload/collections/SpecialOffers'
 import { Users } from '@/payload/collections/Users'
@@ -26,7 +27,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Pages, Menus, Services, PortfolioItems, SpecialOffers],
+  collections: [Users, Media, Pages, Menus, Routes, Services, PortfolioItems, SpecialOffers],
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI ?? '',

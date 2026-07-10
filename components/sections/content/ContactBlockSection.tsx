@@ -1,0 +1,3 @@
+import type { ContactBlock } from '@/payload-types'
+interface ContactBlockSectionProps { block: ContactBlock }
+export function ContactBlockSection({ block }: ContactBlockSectionProps) { return <section className="white-section contact"><div className="container"><div className="contact__wrapper"><div className="contact__content card"><span className="eyebrow">{block.eyebrow}</span><h2>{block.title}</h2>{block.itemsText ? <p>{block.itemsText}</p> : null}{block.mapUrl ? <div className="contact__map"><iframe loading="lazy" src={block.mapUrl} title={block.title} /></div> : null}</div></div></div></section> }

@@ -12,7 +12,7 @@ const config = {
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
-  testMatch: ['<rootDir>/tests/components/**/*.test.ts?(x)'],
+  testMatch: ['<rootDir>/tests/**/*.test.ts?(x)'],
 }
 
 export default createJestConfig(config)
