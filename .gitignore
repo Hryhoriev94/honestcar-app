@@ -39,3 +39,6 @@ Thumbs.db
 # Reference projects
 source/
 wordpress/
+
+# Local project integrations and credentials
+project_settings/
